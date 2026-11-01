@@ -2,6 +2,8 @@
 
 **[English](#english) · [Deutsch](#deutsch)**
 
+> 🚧 **Untested design – the first prototype is still pending.** / **Ungetestetes Design – der erste Prototyp steht noch aus.**
+
 ![Preview](bilder/vorschau.png)
 
 ---
