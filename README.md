@@ -8,19 +8,6 @@
 
 ![Preview](bilder/vorschau.png)
 
-### Repository layout
-
-| Folder | Content |
-|---|---|
-| `druck/` | Print files (STL + sliced Bambu Studio projects) |
-| `anleitung/` | Picture guides (English + German) |
-| `bilder/` | Images |
-| `cad/` | OpenSCAD model and tools |
-
-File names are partly German: *Passprobe* = test-fit piece, *Korpus* = body, *Rueckwand* = back panel, *Frontkappe* = front grille.
-
----
-
 ## English
 
 A compact 2-way Wi-Fi speaker with an ESP32 and a DSP amplifier in a fully 3D-printed enclosure. It has no buttons; you control it from your phone or through Home Assistant.
