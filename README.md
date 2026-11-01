@@ -10,7 +10,7 @@
 
 A compact 2-way Wi-Fi speaker with an ESP32 and a DSP amplifier in a fully 3D-printed enclosure. It has no buttons; you control it from your phone or through Home Assistant.
 
-> **Status:** The design is finished and the parts are ordered. The first prototype has **not been built or measured yet**. The DSP settings (crossover, EQ, excursion protection) will be added after the passive radiator has been measured. Until then, do not connect the tweeter (see below).
+> **Note:** The DSP settings (crossover, EQ, excursion protection) will be added after the passive radiator has been measured. Until then, do not connect the tweeter (see below).
 
 ### Features
 
@@ -93,7 +93,7 @@ Wiring (always + to +; the capacitor goes into the tweeter's plus lead):
 
 Kompakter 2-Weg-WLAN-Lautsprecher mit ESP32 und DSP-Verstärker, Gehäuse komplett 3D-gedruckt. Ohne Tasten am Gerät, bedient wird er nur übers Handy bzw. über Home Assistant.
 
-> **Status:** Konstruktion abgeschlossen, Teile bestellt. Der erste Prototyp ist **noch nicht gebaut und nicht gemessen**. Die DSP-Einstellung (Frequenzweiche, EQ, Hubschutz) wird nach der Messung der Passivmembran ergänzt. Bis dahin den Hochtöner nicht anschliessen (siehe unten).
+> **Hinweis:** Die DSP-Einstellung (Frequenzweiche, EQ, Hubschutz) wird nach der Messung der Passivmembran ergänzt. Bis dahin den Hochtöner nicht anschliessen (siehe unten).
 
 ### Eigenschaften
 
