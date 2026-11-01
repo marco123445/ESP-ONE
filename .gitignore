@@ -1,0 +1,4 @@
+*.log
+__pycache__/
+stl_tmp/
+*.tmp
