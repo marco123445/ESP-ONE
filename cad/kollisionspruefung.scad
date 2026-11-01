@@ -1,3 +1,5 @@
+// EN: collision check – intersects two parts (pair="body-woofer" …); empty result = no collision. Set part = "none" in espone.scad first.
+// DE: Kollisionsprüfung – schneidet zwei Teile; leeres Ergebnis = kollisionsfrei. Vorher in espone.scad part = "none" setzen.
 // Kollisions- und Volumenprüfung: pair=<a>-<b> schneidet zwei Teile in Einbaulage; pair="air" = Innenluft
 include <espone.scad>
 pair = "";

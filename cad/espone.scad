@@ -1,3 +1,8 @@
+// ESP-ONE – parametric enclosure (OpenSCAD) / parametrisches Gehäuse
+// EN: choose the part with part = "body" | "back" | "cap" | "testfit" | "preview" | "explode"; dimensions in mm.
+//     Comments below are in German. body = Korpus, back = Rückwand, cap = Frontkappe, testfit = Passprobe.
+// DE: Teil wählen mit part = …; Masse in mm. Kommentare unten auf Deutsch.
+
 // ESP-ONE – DIY WLAN-Lautsprecher, parametrisches Gehäuse v5.0 (Innenraum = v4; Wand 8 mm für 3+3 Wandlinien → steifer + schneller; Kappe 2,4 mm mit grösseren Löchern)
 // Bestückung: Visaton W 100 S – 4 Ω (Art. 9020) · Visaton G 25 NDWG – 8 Ω (Art. 1188) · Passivmembran 4" AliExpress (GHXAMP 105 mm)
 // Alles M3 + Gewindeeinsätze. Drucker: Bambu P1S (256³). Masse in mm.

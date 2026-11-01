@@ -8,6 +8,17 @@
 
 ![Preview](bilder/vorschau.png)
 
+### Repository layout
+
+| Folder | Content |
+|---|---|
+| `druck/` | Print files (STL + sliced Bambu Studio projects) |
+| `anleitung/` | Picture guides (English + German) |
+| `bilder/` | Images |
+| `cad/` | OpenSCAD model and tools |
+
+File names are partly German: *Passprobe* = test-fit piece, *Korpus* = body, *Rueckwand* = back panel, *Frontkappe* = front grille.
+
 ---
 
 ## English
@@ -31,7 +42,7 @@ A compact 2-way Wi-Fi speaker with an ESP32 and a DSP amplifier in a fully 3D-pr
 
 ### Parts
 
-Full list (German): **[TEILELISTE.md](TEILELISTE.md)**
+Full list (English + German): **[TEILELISTE.md](TEILELISTE.md)**
 
 Main parts per speaker:
 - Sonocotta **Louder ESP32**, ESP32-WROVER-N8R8 variant with external antenna (TAS5805M)
@@ -91,6 +102,17 @@ Wiring (always + to +; the capacitor goes into the tweeter's plus lead):
 |---|---|---|
 | ![](bilder/front.png) | ![](bilder/rueckseite.png) | ![](bilder/explosion.png) |
 
+### Repository layout
+
+| Folder | Content |
+|---|---|
+| `druck/` | Print files (STL + sliced Bambu Studio projects) |
+| `anleitung/` | Picture guides (English + German) |
+| `bilder/` | Images |
+| `cad/` | OpenSCAD model and tools |
+
+File names are partly German: *Passprobe* = test-fit piece, *Korpus* = body, *Rueckwand* = back panel, *Frontkappe* = front grille.
+
 ---
 
 ## Deutsch
@@ -114,7 +136,7 @@ Kompakter 2-Weg-WLAN-Lautsprecher mit ESP32 und DSP-Verstärker, Gehäuse komple
 
 ### Teile
 
-Vollständige Liste: **[TEILELISTE.md](TEILELISTE.md)**
+Vollständige Liste (Englisch + Deutsch): **[TEILELISTE.md](TEILELISTE.md)**
 
 Hauptteile pro Lautsprecher:
 - Sonocotta **Louder ESP32**, Variante ESP32-WROVER-N8R8 mit externer Antenne (TAS5805M)
@@ -173,3 +195,12 @@ Verdrahtung (alles + an +, der Kondensator kommt in die Plus-Leitung des Hochtö
 | Front | Rückseite | Explosion |
 |---|---|---|
 | ![](bilder/front.png) | ![](bilder/rueckseite.png) | ![](bilder/explosion.png) |
+
+### Ordner
+
+| Ordner | Inhalt |
+|---|---|
+| `druck/` | Druckdateien (STL + geslicte Bambu-Studio-Projekte) |
+| `anleitung/` | Bildanleitungen (Englisch + Deutsch) |
+| `bilder/` | Bilder |
+| `cad/` | OpenSCAD-Modell und Werkzeuge |
