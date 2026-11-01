@@ -63,15 +63,15 @@ Bambu Studio warns that the bed temperature is higher than the filament's soften
 
 ### Assembly
 
-**Picture guide (German labels): [anleitung/BILDANLEITUNG.pdf](anleitung/BILDANLEITUNG.pdf)**: 10 pages, all heat-set inserts marked directly from the CAD model.
+**Picture guide: [anleitung/PICTURE_GUIDE_EN.pdf](anleitung/PICTURE_GUIDE_EN.pdf)**: 10 pages, all heat-set inserts marked directly from the CAD model. (German version: [BILDANLEITUNG.pdf](anleitung/BILDANLEITUNG.pdf))
 
 | | | |
 |---|---|---|
-| ![](anleitung/seiten/seite_01.png) | ![](anleitung/seiten/seite_04.png) | ![](anleitung/seiten/seite_06.png) |
+| ![](anleitung/pages_en/page_en_01.png) | ![](anleitung/pages_en/page_en_04.png) | ![](anleitung/pages_en/page_en_06.png) |
 
 Wiring (always + to +; the capacitor goes into the tweeter's plus lead):
 
-![Wiring](bilder/verdrahtung.png)
+![Wiring](bilder/wiring_en.png)
 
 ### Firmware
 
@@ -146,7 +146,7 @@ Bambu Studio warnt „Betttemperatur höher als Erweichungstemperatur“. Das is
 
 ### Montage
 
-**Bildanleitung: [anleitung/BILDANLEITUNG.pdf](anleitung/BILDANLEITUNG.pdf)**: 10 Seiten, alle Gewindeeinsätze direkt aus dem CAD markiert.
+**Bildanleitung: [anleitung/BILDANLEITUNG.pdf](anleitung/BILDANLEITUNG.pdf)**: 10 Seiten, alle Gewindeeinsätze direkt aus dem CAD markiert. (Englisch: [PICTURE_GUIDE_EN.pdf](anleitung/PICTURE_GUIDE_EN.pdf))
 
 | | | |
 |---|---|---|
