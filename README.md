@@ -24,7 +24,7 @@ A compact 2-way Wi-Fi speaker with an ESP32 and a DSP amplifier in a fully 3D-pr
 | Amplifier | TI TAS5805M with built-in DSP (crossover approx. 2.5 kHz, EQ, excursion protection) |
 | Enclosure | 154 × 232 × 134 mm, 2.57 L net, 8 mm sandwich walls with ribs (wall resonances around 5 kHz) |
 | Power | 18 V power supply, estimated standby approx. 0.6–1 W |
-| Printing | 3 parts + test-fit piece, Bambu Lab P1S (256 mm build volume), no outside supports, approx. 17 h and 0.7 kg per speaker |
+| Printing | 3 parts + test-fit piece, Bambu Lab P1S (256 mm build volume), no outside supports, approx. 16.5 h and 0.7 kg per speaker |
 | Assembly | Only M3 socket head screws and M3 heat-set inserts; everything can be taken apart again |
 
 ### Parts
@@ -42,10 +42,12 @@ Main parts per speaker:
 
 | File | Orientation | Note |
 |---|---|---|
-| `druck/…/…1_Passprobe.3mf` | flat | **Print first**: checks cut-outs, hole patterns, PCB holes and a heat-set insert |
+| `druck/…/…1_Passprobe.3mf` | flat | **Print first** (approx. 50 min, 35 g): lightweight frame that checks cut-outs, hole patterns, flange pockets, PCB holes, a heat-set insert and a screw counterbore |
 | `druck/…/…2_Korpus.3mf` (body) | front face down | Tree supports from the build plate only (only in the two driver recesses) |
 | `druck/…/…3_Rueckwand.3mf` (back panel) | outer face down | no supports |
 | `druck/…/…4_Frontkappe.3mf` (front grille) | visible face down | no supports |
+
+![Test-fit piece](bilder/passprobe.png)
 
 - `druck/bambu_PLA/`: sliced projects for **Bambu PLA Basic**
 - `druck/bambu_PETG/`: the same parts for **Bambu PETG HF**
@@ -118,7 +120,7 @@ Kompakter 2-Weg-WLAN-Lautsprecher mit ESP32 und DSP-Verstärker, Gehäuse komple
 | Verstärker | TI TAS5805M mit eingebautem DSP (Frequenzweiche ca. 2,5 kHz, EQ, Hubschutz) |
 | Gehäuse | 154 × 232 × 134 mm, netto 2,57 L, 8-mm-Sandwichwände mit Rippen (Wandresonanzen um 5 kHz) |
 | Strom | 18-V-Netzteil, Standby geschätzt ca. 0,6–1 W |
-| Druck | 3 Teile + Passprobe, Bambu Lab P1S (256 mm Bauraum), aussen ohne Stützen, ca. 17 h und 0,7 kg pro Lautsprecher |
+| Druck | 3 Teile + Passprobe, Bambu Lab P1S (256 mm Bauraum), aussen ohne Stützen, ca. 16,5 h und 0,7 kg pro Lautsprecher |
 | Montage | nur M3-Zylinderkopfschrauben und M3-Gewindeeinsätze, alles wieder zerlegbar |
 
 ### Teile
@@ -136,10 +138,12 @@ Hauptteile pro Lautsprecher:
 
 | Datei | Lage auf dem Bett | Hinweis |
 |---|---|---|
-| `druck/…/…1_Passprobe.3mf` | flach | **zuerst drucken**: prüft Ausschnitte, Lochbilder, Platinenlöcher, Gewindeeinsatz |
+| `druck/…/…1_Passprobe.3mf` | flach | **zuerst drucken** (ca. 50 min, 35 g): leichter Rahmen, prüft Ausschnitte, Lochbilder, Flanschtaschen, Platinenlöcher, Gewindeeinsatz und Schraubensenkung |
 | `druck/…/…2_Korpus.3mf` | Front nach unten | Baumstützen nur ab Druckbett (nur in den zwei Lautsprecher-Taschen) |
 | `druck/…/…3_Rueckwand.3mf` | Aussenseite nach unten | ohne Stützen |
 | `druck/…/…4_Frontkappe.3mf` | Sichtseite nach unten | ohne Stützen |
+
+![Passprobe](bilder/passprobe.png)
 
 - `druck/bambu_PLA/`: fertig geslicte Projekte für **Bambu PLA Basic**
 - `druck/bambu_PETG/`: dieselben Teile für **Bambu PETG HF**

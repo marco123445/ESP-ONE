@@ -26,7 +26,7 @@ Parts per speaker.
 | 14 | Wiring | Speaker cable 2 × 0.75 mm² OFC (pure copper, not CCA) | 1 m | |
 | 15 | Wiring | Silicone wire 20 AWG red/black | 1 m | |
 | 16 | Wiring | Heat-shrink tubing set | 1 | |
-| 17 | Filament | PLA (e.g. Bambu PLA Basic) or PETG (e.g. Bambu PETG HF) | approx. 0.7 kg | + 80 g for the test-fit piece; 1 roll per speaker |
+| 17 | Filament | PLA (e.g. Bambu PLA Basic) or PETG (e.g. Bambu PETG HF) | approx. 0.7 kg | + 35 g for the test-fit piece; 1 roll per speaker |
 | 18 | Hardware | Steel washers (added mass for the passive radiator) | 4–6 | Quantity depends on the measurement |
 | 19 | Hardware | Heat-set inserts M3 × L5 × OD4.5 (bore 4.0 mm) | 26 | 6 back panel · 5 woofer · 4 tweeter · 4 radiator · 3 PCB · 4 grille |
 | 20 | Hardware | Socket head screws M3: 6 × 10 mm · 9 × 12 mm · 8 × 8 mm · 3 × 6 mm | 26 | M3×10 back panel · M3×12: 5 woofer + 4 grille · M3×8: 4 tweeter + 4 radiator · M3×6 PCB |
@@ -59,7 +59,7 @@ Teile pro Lautsprecher.
 | 14 | Kabel | Lautsprecherkabel 2 × 0,75 mm² OFC (reines Kupfer, kein CCA) | 1 m | |
 | 15 | Kabel | Silikonlitze 20 AWG rot/schwarz | 1 m | |
 | 16 | Kabel | Schrumpfschlauch-Set | 1 | |
-| 17 | Filament | PLA (z.B. Bambu PLA Basic) oder PETG (z.B. Bambu PETG HF) | ca. 0,7 kg | + 80 g für die Passprobe; 1 Rolle pro Lautsprecher |
+| 17 | Filament | PLA (z.B. Bambu PLA Basic) oder PETG (z.B. Bambu PETG HF) | ca. 0,7 kg | + 35 g für die Passprobe; 1 Rolle pro Lautsprecher |
 | 18 | Mechanik | Stahl-Unterlegscheiben (Zusatzmasse für die Passivmembran) | 4–6 | Menge je nach Messung |
 | 19 | Mechanik | Gewindeeinsätze M3 × L5 × OD4,5 (Bohrung 4,0 mm) | 26 | 6 Rückwand · 5 Tieftöner · 4 Hochtöner · 4 Membran · 3 Platine · 4 Kappe |
 | 20 | Mechanik | Zylinderkopfschrauben M3: 6 × 10 mm · 9 × 12 mm · 8 × 8 mm · 3 × 6 mm | 26 | M3×10 Rückwand · M3×12: 5 Tieftöner + 4 Kappe · M3×8: 4 Hochtöner + 4 Membran · M3×6 Platine |

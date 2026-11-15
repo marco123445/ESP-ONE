@@ -12,7 +12,7 @@
 //   "body"     Korpus mit Schallwand          – Druck: Front nach UNTEN
 //   "back"     Rückwand (PR, DC, Platine)      – Druck: Aussenseite nach UNTEN
 //   "cap"      Frontkappe mit Lochgitter       – Druck: Sichtseite nach UNTEN
-//   "testfit"  Passprobe                       – ZUERST drucken
+//   "testfit"  Passprobe (v5.1 Skelett, 2 mm)  – ZUERST drucken
 //   "preview" / "explode"                      – Ansichten
 part = "preview";
 
@@ -170,21 +170,38 @@ module cap() {
     }
 }
 
-// ---------------- Passprobe (flach, 250 × 185 × 3) ----------------
+// ---------------- Passprobe v5.1 (Skelett, 2 mm, ca. 250 × 185) ----------------
+// Nur Ringe um die Ausschnitte + Stege. Prüft: Ausschnitte, Lochkreise, Flanschtaschen (Rand = Taschen-Ø),
+// PR-Rahmen 105, DC-Loch, Platinenlöcher (Stifte), 1 Einsatz in echter Tiefe 6.5, M3-Senkung Ø6.2 × 3.2.
 module testfit() {
-    t = 3; wz = 62; px = 125; tx = -30; tz = 152;
+    t = 2; rim = 2; rw = 1.6; bar = 6;
+    wz = 62; px = 125; tx = -30; tz = 152; pcx = 30; pcy = 125; ix = 175; iy = 168; mx = 175; my = 132; dx = 150; dy = 150;
+    module bar2(a, b) { hull() { translate([a[0], a[1], 0]) cylinder(d=bar, h=t, $fn=24); translate([b[0], b[1], 0]) cylinder(d=bar, h=t, $fn=24); } }
     difference() {
-        translate([-62, 0, 0]) cube([250, 185, t]);
+        union() {
+            translate([0, wz, 0]) cylinder(d=woofer_fl+0.6+2*rw, h=t);                                // Tieftöner-Ring
+            translate([px, wz, 0]) linear_extrude(t) offset(r=8) offset(delta=-8) square(pr_sq, center=true);   // PR-Rahmen 105
+            translate([tx, tz, 0]) cylinder(d=tweeter_fl+0.6+2*rw, h=t);                              // Hochtöner-Ring
+            translate([dx, dy, 0]) cylinder(d=dc_hole+9, h=t);
+            translate([mx, my, 0]) cylinder(d=12, h=3.2+1.2);                                       // Senkung + 1.2 Boden
+            translate([ix, iy, 0]) cylinder(d=10, h=ins_depth+1);                                   // Einsatz-Dom
+            translate([pcx, pcy, 0]) difference() { cube([pcb_w, pcb_h, t]); translate([4, 4, -1]) cube([pcb_w-8, pcb_h-8, t+2]); }  // Platinenrahmen
+            for (p = pcb_holes) translate([pcx+p[0], pcy+p[1], 0]) cylinder(d=8, h=t);
+            bar2([0, wz], [px, wz]); bar2([0, wz], [tx, tz]); bar2([tx, tz], [pcx, pcy+pcb_h-4]);
+            bar2([0, wz], [pcx+20, pcy]); bar2([px, wz], [pcx+pcb_w-4, pcy]); bar2([px, wz], [dx, dy]);
+            bar2([dx, dy], [ix, iy]); bar2([dx, dy], [mx, my]); bar2([mx, my], [px+40, wz+40]); bar2([pcx+pcb_w, pcy+pcb_h/2], [dx, dy]);
+        }
         translate([0, wz, -1]) { cylinder(d=woofer_cut, h=t+2); for (k = [0:woofer_n-1]) rotate(90+k*72) translate([woofer_pcd/2, 0, 0]) cylinder(d=ins_d, h=t+2); }
         translate([px, wz, -1]) { cylinder(d=pr_cut, h=t+2); for (i=[-1,1], j=[-1,1]) translate([i*pr_holes/2, j*pr_holes/2, 0]) cylinder(d=ins_d, h=t+2); }
         translate([tx, tz, -1]) { cylinder(d=tweeter_cut, h=t+2); for (k = [0:3]) rotate(45+k*90) translate([tweeter_pcd/2, 0, 0]) cylinder(d=ins_d, h=t+2); }
-        translate([150, 150, -1]) cylinder(d=dc_hole, h=t+2);
-        translate([175, 132, -1]) cylinder(d=3.4, h=t+2);    // M3 Durchgang
-        translate([175, 168, -1]) cylinder(d=ins_d, h=t+2);  // Einsatz
-        // Platinenumriss als 0.6-mm-Nut
-        translate([30, 125, t-0.6]) difference() { cube([pcb_w, pcb_h, 1]); translate([0.8, 0.8, -1]) cube([pcb_w-1.6, pcb_h-1.6, 3]); }
+        translate([dx, dy, -1]) cylinder(d=dc_hole, h=t+2);
+        translate([mx, my, -1]) cylinder(d=3.4, h=10); translate([mx, my, 1.2]) cylinder(d=6.2, h=10);   // wie Kappe: Ø3.4 + Senkung Ø6.2 × 3.2
+        translate([ix, iy, 0.5]) cylinder(d=ins_d, h=ins_depth+1);                                  // Einsatz-Bohrung 6.5 tief (wie Korpus)
     }
-    translate([30, 125, 0]) for (p = pcb_holes) translate([p[0], p[1], 0]) cylinder(d=2.9, h=t+4);   // Stifte für die Platinenlöcher
+    // Rand = Durchmesser der Flanschtaschen im Korpus: Flansch muss sich hineinlegen lassen
+    translate([0, wz, t]) difference() { cylinder(d=woofer_fl+0.6+2*rw, h=rim); translate([0,0,-1]) cylinder(d=woofer_fl+0.6, h=rim+2); }
+    translate([tx, tz, t]) difference() { cylinder(d=tweeter_fl+0.6+2*rw, h=rim); translate([0,0,-1]) cylinder(d=tweeter_fl+0.6, h=rim+2); }
+    translate([pcx, pcy, 0]) for (p = pcb_holes) translate([p[0], p[1], 0]) cylinder(d=2.9, h=t+4);   // Stifte für die Platinenlöcher
 }
 
 // ---------------- Dummies (Ansicht + Kollisionsprüfung) ----------------
