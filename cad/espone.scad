@@ -175,7 +175,7 @@ module cap() {
 // PR-Rahmen 105, DC-Loch, Platinenlöcher (Stifte), 1 Einsatz in echter Tiefe 6.5, M3-Senkung Ø6.2 × 3.2.
 module testfit() {
     t = 2; rim = 2; rw = 1.6; bar = 6;
-    wz = 62; px = 125; tx = -30; tz = 152; pcx = 30; pcy = 125; ix = 175; iy = 168; mx = 175; my = 132; dx = 150; dy = 150;
+    wz = 62; px = 125; tx = -30; tz = 162; pcx = 30; pcy = 125; ix = 175; iy = 168; mx = 175; my = 132; dx = 150; dy = 150;
     module bar2(a, b) { hull() { translate([a[0], a[1], 0]) cylinder(d=bar, h=t, $fn=24); translate([b[0], b[1], 0]) cylinder(d=bar, h=t, $fn=24); } }
     difference() {
         union() {

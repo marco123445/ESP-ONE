@@ -85,6 +85,7 @@ Wiring (always + to +; the capacitor goes into the tweeter's plus lead):
 
 - `cad/espone.scad`: parametric OpenSCAD model (body, back panel, front grille, test-fit piece). Select the part with `part = "body" | "back" | "cap" | "testfit" | "preview"`.
 - `cad/kollisionspruefung.scad`: intersects the parts pairwise; an empty result means no collision. Set `part = "none"` in `espone.scad` first.
+- `cad/check_testfit.py`: checks that the parts placed on the test-fit piece do not overlap (min. 2 mm clearance).
 - `cad/render.py`: simple renderer for preview images from STL files (Python, numpy, Pillow).
 
 | Front | Back | Exploded view |
@@ -181,6 +182,7 @@ Verdrahtung (alles + an +, der Kondensator kommt in die Plus-Leitung des Hochtö
 
 - `cad/espone.scad`: parametrisches OpenSCAD-Modell (Korpus, Rückwand, Frontkappe, Passprobe). Teil wählen mit `part = "body" | "back" | "cap" | "testfit" | "preview"`.
 - `cad/kollisionspruefung.scad`: schneidet die Teile paarweise, ein leeres Ergebnis heisst kollisionsfrei. Dafür in `espone.scad` `part = "none"` setzen.
+- `cad/check_testfit.py`: prüft, dass sich die auf die Passprobe gelegten Teile nicht überschneiden (mind. 2 mm Abstand).
 - `cad/render.py`: einfacher Renderer für Vorschaubilder aus STL-Dateien (Python, numpy, Pillow).
 
 | Front | Rückseite | Explosion |
