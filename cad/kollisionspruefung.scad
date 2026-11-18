@@ -9,7 +9,7 @@ module P(n) {
     else if (n=="pr") pr_dummy(); else if (n=="pcb") pcb_dummy();
 }
 if (pair == "air") difference() {
-    intersection() { inner_space(); slab(yBi-1, yR); }
+    intersection() { inner_body(); slab(yBi-1, yR); }
     body(); back(); woofer_dummy(); tweeter_dummy(); pr_dummy(); pcb_dummy();
 } else {
     a = search("-", pair)[0];

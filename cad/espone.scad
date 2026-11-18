@@ -3,7 +3,7 @@
 //     Comments below are in German. body = Korpus, back = Rückwand, cap = Frontkappe, testfit = Passprobe.
 // DE: Teil wählen mit part = …; Masse in mm. Kommentare unten auf Deutsch.
 
-// ESP-ONE – DIY WLAN-Lautsprecher, parametrisches Gehäuse v5.0 (Innenraum = v4; Wand 8 mm für 3+3 Wandlinien → steifer + schneller; Kappe 2,4 mm mit grösseren Löchern)
+// ESP-ONE – DIY WLAN-Lautsprecher, parametrisches Gehäuse v5.1 (Korpus ohne Innenlippe oben, Passprobe als Skelett) (Innenraum = v4; Wand 8 mm für 3+3 Wandlinien → steifer + schneller; Kappe 2,4 mm mit grösseren Löchern)
 // Bestückung: Visaton W 100 S – 4 Ω (Art. 9020) · Visaton G 25 NDWG – 8 Ω (Art. 1188) · Passivmembran 4" AliExpress (GHXAMP 105 mm)
 // Alles M3 + Gewindeeinsätze. Drucker: Bambu P1S (256³). Masse in mm.
 // Koordinaten: x = Breite, y = Tiefe (Front bei -D/2), z = Höhe.
@@ -85,6 +85,9 @@ module tongue(y0, c=0) {
     }
 }
 module inner_space() { translate([0, 0, wall]) rbox(W-2*wall, D-2*wall, H-2*wall, R-wall+0.01, 0.01); }
+// v5.1: Innenraum des Korpus nach hinten verlängert → die R4-Rundung liegt hinter der Trennebene yR.
+// Sonst entsteht oben an den Seitenwänden (Druck: Front unten) eine überhängende Lippe, die Baumstützen anzieht.
+module inner_body() { translate([0, 10, wall]) rbox(W-2*wall, D-2*wall+20, H-2*wall, R-wall+0.01, 0.01); }
 
 // ---------------- Korpus ----------------
 module body() {
@@ -95,10 +98,10 @@ module body() {
                     intersection() { outer(); slab(yS, yR); }
                     tongue(yB);                                                    // Zunge mit 45°-Übergang
                 }
-                intersection() { inner_space(); slab(yBi, yR+1); }
+                intersection() { inner_body(); slab(yBi, yR+1); }
             }
             intersection() {
-                inner_space();
+                inner_body();
                 union() {
                     for (c = cols) ycyl(col_d, yBi-1, yR, c[0], c[1]);
                     for (s = [-1, 1], z = side_ribs)

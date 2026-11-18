@@ -24,7 +24,7 @@ A compact 2-way Wi-Fi speaker with an ESP32 and a DSP amplifier in a fully 3D-pr
 | Amplifier | TI TAS5805M with built-in DSP (crossover approx. 2.5 kHz, EQ, excursion protection) |
 | Enclosure | 154 × 232 × 134 mm, 2.57 L net, 8 mm sandwich walls with ribs (wall resonances around 5 kHz) |
 | Power | 18 V power supply, estimated standby approx. 0.6–1 W |
-| Printing | 3 parts + test-fit piece, Bambu Lab P1S (256 mm build volume), no outside supports, approx. 16.5 h and 0.7 kg per speaker |
+| Printing | 3 parts + test-fit piece, Bambu Lab P1S (256 mm build volume), no outside supports, approx. 16.5 h and 0.65 kg per speaker |
 | Assembly | Only M3 socket head screws and M3 heat-set inserts; everything can be taken apart again |
 
 ### Parts
@@ -121,7 +121,7 @@ Kompakter 2-Weg-WLAN-Lautsprecher mit ESP32 und DSP-Verstärker, Gehäuse komple
 | Verstärker | TI TAS5805M mit eingebautem DSP (Frequenzweiche ca. 2,5 kHz, EQ, Hubschutz) |
 | Gehäuse | 154 × 232 × 134 mm, netto 2,57 L, 8-mm-Sandwichwände mit Rippen (Wandresonanzen um 5 kHz) |
 | Strom | 18-V-Netzteil, Standby geschätzt ca. 0,6–1 W |
-| Druck | 3 Teile + Passprobe, Bambu Lab P1S (256 mm Bauraum), aussen ohne Stützen, ca. 16,5 h und 0,7 kg pro Lautsprecher |
+| Druck | 3 Teile + Passprobe, Bambu Lab P1S (256 mm Bauraum), aussen ohne Stützen, ca. 16,5 h und 0,65 kg pro Lautsprecher |
 | Montage | nur M3-Zylinderkopfschrauben und M3-Gewindeeinsätze, alles wieder zerlegbar |
 
 ### Teile
